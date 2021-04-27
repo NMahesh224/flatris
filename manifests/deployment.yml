@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nmaheshflatris 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nmaheshflatris
+  template:
+    metadata:
+      labels:
+        app: nmaheshflatris 
+    spec:
+      containers:
+        - name: nmaheshflatris 
+          image: democontainerregi.azurecr.io/nmaheshflatris
+          ports:
+          - containerPort: 3000
